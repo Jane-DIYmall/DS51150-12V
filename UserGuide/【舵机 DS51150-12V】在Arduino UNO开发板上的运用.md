@@ -8,20 +8,20 @@ Arduino IDE本身自带有**Servo**库，无需下载就可以直接使用。
 # 1. 硬件需求
 
 >* 舵机：DS51150-12V 270°及 DS51150-12V 180° 各一台
->   ![](../tree/main/vx_images/280082823237249.png)
+>   ![](../main/vx_images/280082823237249.png)
  
 >* Arduino开发板：Arduino UNO Rev3 开发板一块及对应的USB数据线一条
-> ![](../tree/main/vx_images//232963823250084.png)
+> ![](../main/vx_images//232963823250084.png)
 
 >* 杜邦线：两头都是公头的2.54mm杜邦线一排
-> ![](../tree/main/vx_images//566754123246639.png)
+> ![](../main/vx_images//566754123246639.png)
 
 
 >* 电脑：Windows/Mac 电脑一台（本教程使用Windows 11 64位系统）
-> ![](../tree/main/vx_images/6434523242393.png)
+> ![](../main/vx_images/6434523242393.png)
 
 >*  电源：12V直流电源，可以使用适配器或者稳压电源（本教程使用稳压电源MS-305DS测试）
-> ![](../tree/main/vx_images/52904923257877.png)
+> ![](../main/vx_images/52904923257877.png)
 
 # 2. 软件需求
 >* 编程软件：Arduino IDE 1.8.19 （仅代表本教程测试版本，可以使用其他版本）
@@ -29,10 +29,10 @@ Arduino IDE本身自带有**Servo**库，无需下载就可以直接使用。
 >* Arduino库：Servo 1.1.8（仅代表本教程测试版本，可以使用其他版本）
 注：不同舵机驱动的脉宽范围会有所区别，需要根据舵机DS51150-12V的范围对Servo库进行修改。修改步骤如下：
 >1. 打开DS51150-12V的规格书，进行查看
-> ![](../tree/main/vx_images/15814023231064.png)
+> ![](../main/vx_images/15814023231064.png)
 >2. 打开库文件，库文件位置在Arduino安装位置：\Arduino\libraries\Servo\src  的Servo.h文件。
 >3. 对Servo.h库文件进行如下修改
-![](../tree/main/vx_images/172790200237358.png)
+![](../main/vx_images/172790200237358.png)
 ```c
 //#define MIN_PULSE_WIDTH       544     // the shortest pulse sent to a servo  
 //#define MAX_PULSE_WIDTH      2400     // the longest pulse sent to a servo
@@ -42,11 +42,11 @@ Arduino IDE本身自带有**Servo**库，无需下载就可以直接使用。
 
 # 3. 硬件接线说明
 ## 3.1 DS51150-12V 180° 同Arduino接线说明
-![](../tree/main/vx_images/254111500260283.png)
+![](../main/vx_images/254111500260283.png)
 
 ## 3.2 DS51150-12V 270° 同Arduino接线说明
 
-![](../tree/main/vx_images/583221600257887.png)
+![](../main/vx_images/583221600257887.png)
 
 # 4. 例程测试
 
@@ -110,8 +110,8 @@ void loop() {
 
 2. 进行编译下载
 * 点击Tools -> 选择对应开发板Arduino Uno以及对应COM口，点击下图红色箭头标注的编译并下载，等Done uploading代表上传成功
-![](../tree/main/vx_images/120364400255389.png)
+![](../main/vx_images/120364400255389.png)
 
 3. 进行验证
 
-![123](../tree/main/vx_images/268130301259070.gif)
+![123](../main/vx_images/268130301259070.gif)
